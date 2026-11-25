@@ -10,11 +10,7 @@ User question
 -> **Vector database** retrieves relevant documents  
 -> Retrieved documents are combined with the query  
 -> The augmented prompt is sent to the LLM  
--> **LLM generates** a response
-
-<img width="508" height="283" alt="image" src="https://github.com/user-attachments/assets/e4348194-020d-48f8-a5e3-2d84b80e4901" />  
-(https://truera.com/ai-quality-education/generative-ai-rags/what-is-retrieval-augmented-generation-rag-for-llms/)  
-
+-> **LLM generates** a response  
   
 ## Embedding  
 The process of converting **data(especially text) into numerical vector** representations ***in vector space.***  
