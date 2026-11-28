@@ -1,3 +1,8 @@
+# OCR and document analysis
+# Handles scanned PDFs
+# Supports table and form extraction
+# Managed AWS service with usage-based pricing
+
 import boto3
 
 # Create Textract client
