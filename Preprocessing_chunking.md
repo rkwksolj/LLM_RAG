@@ -24,3 +24,6 @@ Parsing extracts machine-readable text from documents. Since it is the **first s
 | Headers & Footers | Page numbers and document titles are inserted into the content | Lower embedding quality |
 | Tables | Row and column structure is flattened into plain text | Reduced data accuracy |
 | Scanned PDFs | Text exists only as images and cannot be extracted directly | OCR required |
+
+****Note: PDF parsing may lose layout and structural information. Always verify the extracted text manually.****
+
