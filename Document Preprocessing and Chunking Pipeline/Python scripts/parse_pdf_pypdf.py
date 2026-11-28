@@ -1,3 +1,8 @@
+# Fast and free PDF text extraction
+# Ideal for text-based PDFs
+# No OCR support
+# Limited table structure handling
+
 pip install langchain langchain-community pypdf boto3
 from langchain_community.document_loaders import PyPDFLoader
 
