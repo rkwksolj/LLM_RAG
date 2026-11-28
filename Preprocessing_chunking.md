@@ -25,5 +25,25 @@ Parsing extracts machine-readable text from documents. Since it is the **first s
 | Tables | Row and column structure is flattened into plain text | Reduced data accuracy |
 | Scanned PDFs | Text exists only as images and cannot be extracted directly | OCR required |
 
-****Note: PDF parsing may lose layout and structural information. Always verify the extracted text manually.****
+****Note: PDF parsing may lose layout and structural information. Always verify the extracted text manually.****  
 
+**Approach 1: LangChain Document Loaders (Open Source)**  
+LangChain provides Document Loaders for parsing documents in various formats.  
+
+- PyPDFLoader: Fast and suitable for simple text-based PDFs.
+- PDFPlumber: Better for PDFs with tables and complex layouts.
+- UnstructuredLoader: Designed for documents containing mixed content such as text, images, and tables.  
+
+**Approach 2: Amazon Textract (Managed AWS Service)**  
+Extract not only text but also document structures such as tables and forms, making it useful for complex and scanned PDFs.  
+| Feature | LangChain (PyPDF) | Amazon Textract |
+|---------|-------------------|-----------------|
+| Text Extraction | O | O |
+| Table Structure Recognition | Limited | O (Row/Column Level) |
+| Scanned PDF (OCR) | X | O |
+| Form (Key-Value) Extraction | X | O |
+| Cost | Free (Open Source) | Pay Per Page |
+| Setup Complexity | Low | Requires AWS Credentials |  
+
+LangChain and Amazon Textract are complementary tools, and the **choice depends on document characteristics**. First, check whether the *PDF contains selectable text*. If not, *OCR* is required. If text is selectable, evaluate whether *the document contains tables, forms, complex layouts, or mixed content*. For simple text-based PDFs, PyPDFLoader is usually the best starting point.  
+<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/ebf1bf71-8be9-49f7-927e-52ff6a6170a2" />
